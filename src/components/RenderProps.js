@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Paper, TextField } from '@material-ui/core'
-import { Formik } from 'formik';
+import { Formik } from 'formik'
 
 class RenderProps extends React.Component {
   render() {
@@ -9,7 +9,7 @@ class RenderProps extends React.Component {
         <h2>Render Props</h2>
         <br />
         <Formik>
-          {({ values }) => (
+          {({ values, handleChange, handleBlur }) => (
             <form>
               <TextField
                 name="nome"

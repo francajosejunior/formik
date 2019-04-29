@@ -1,7 +1,8 @@
 import React from 'react'
 import { Button } from '@material-ui/core'
 import RenderProps from '../components/RenderProps'
-import HOC from '../components/HOC';
+import HOC from '../components/HOC'
+import './../index.scss'
 
 const App = () => {
   const [example, setExample] = React.useState('renderprops')

@@ -3,13 +3,15 @@ import { Button, Paper, TextField, Grid } from '@material-ui/core'
 import { Formik, Field } from 'formik'
 import TextField2 from './TextField2'
 
+const initialValues = { nome: '', email: '' }
+
 class RenderProps extends React.Component {
   render() {
     return (
       <Paper>
         <h2>Render Props</h2>
         <br />
-        <Formik initialValues={{ nome: '', email: '' }}>
+        <Formik initialValues={initialValues}>
           {({ values, handleChange, handleBlur }) => (
             <form>
               <Grid container spacing={24}>
@@ -22,7 +24,6 @@ class RenderProps extends React.Component {
                     value={values.nome}
                   />
                 </Grid>
-                
               </Grid>
               <br />
               <Button type="submit" variant="raised" color="primary">

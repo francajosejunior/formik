@@ -2,6 +2,8 @@ import React from 'react'
 import { withFormik } from 'formik'
 import { Paper, Grid, TextField } from '@material-ui/core'
 
+const initialValues = { nome: '', email: '' }
+
 class HOC extends React.Component {
   render() {
     const { values, touched, errors, handleChange, handleBlur } = this.props
@@ -27,5 +29,5 @@ class HOC extends React.Component {
 }
 
 export default withFormik({
-  mapPropsToValues: () => ({ nome: 'Teste' })
+  mapPropsToValues: () => initialValues
 })(HOC)

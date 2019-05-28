@@ -1,5 +1,15 @@
 import React from 'react'
-import { Button, Paper, TextField, Grid } from '@material-ui/core'
+import {
+  Button,
+  Paper,
+  TextField,
+  Grid,
+  Select,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Input
+} from '@material-ui/core'
 import { Formik, Field } from 'formik'
 import TextField2 from './TextField2'
 
@@ -23,6 +33,25 @@ class RenderProps extends React.Component {
                     onBlur={handleBlur}
                     value={values.nome}
                   />
+                </Grid>
+                <Grid item>
+                  <FormControl>
+                    <InputLabel htmlFor="age-helper">Age</InputLabel>
+                    <Select
+                      value={values.idade || ''}
+                      name="idade"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      input={<Input name="input-age" id="age-helper" />}
+                    >
+                      <MenuItem value="">
+                        <em>Selecionar</em>
+                      </MenuItem>
+                      <MenuItem value={10}>Ten</MenuItem>
+                      <MenuItem value={20}>Twenty</MenuItem>
+                      <MenuItem value={30}>Thirty</MenuItem>
+                    </Select>
+                  </FormControl>
                 </Grid>
               </Grid>
               <br />

@@ -3,6 +3,7 @@ import { Button } from '@material-ui/core'
 import RenderProps from '../components/RenderProps'
 import HOC from '../components/HOC'
 import './../index.scss'
+import User from '../components/User'
 
 const App = () => {
   const [example, setExample] = React.useState('renderprops')
@@ -14,6 +15,7 @@ const App = () => {
       <br />
       {example === 'renderprops' && <RenderProps />}
       {example === 'hoc' && <HOC />}
+      <User />
     </>
   )
 }

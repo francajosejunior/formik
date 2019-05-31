@@ -1,0 +1,12 @@
+<FormControlLabel
+    control={
+    <Checkbox
+        checked={values.admin}
+        name="admin"
+        onChange={handleChange}
+        onBlur={handleBlur}
+        color="primary"
+    />
+    }
+    label="Admin"
+/>

@@ -1,0 +1,17 @@
+<FormControl>
+<InputLabel htmlFor="age-helper">Age</InputLabel>
+<Select
+  value={values.idade || ''}
+  name="idade"
+  onChange={handleChange}
+  onBlur={handleBlur}
+  input={<Input name="input-age" id="age-helper" />}
+>
+  <MenuItem value="">
+    <em>Selecionar</em>
+  </MenuItem>
+  <MenuItem value={10}>Ten</MenuItem>
+  <MenuItem value={20}>Twenty</MenuItem>
+  <MenuItem value={30}>Thirty</MenuItem>
+</Select>
+</FormControl>

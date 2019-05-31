@@ -101,7 +101,10 @@ class RenderProps extends React.Component {
                 <Button type="submit" variant="raised" color="primary">
                   Salvar
                 </Button>
+
+                <h4>Values</h4>
                 <pre>{JSON.stringify(values, 0, 2)}</pre>
+                <h4>Errros</h4>
                 <pre>{JSON.stringify(errors, 0, 2)}</pre>
               </form>
             )

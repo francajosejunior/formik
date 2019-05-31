@@ -16,7 +16,6 @@ const App = () => {
       <Topo />
       {example === 'renderprops' && <RenderProps />}
       {example === 'hoc' && <HOC />}
-      <User />
     </>
   )
 }
